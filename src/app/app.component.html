@@ -46,6 +46,31 @@
                 <td>number:'.0-2'</td>
                 <td>{{ PI | number:'.0-2'}}</td>
             </tr>
+            <tr>
+                <td>{{ porcentaje }}</td>
+                <td>percent</td>
+                <td>{{ porcentaje |percent}}</td>
+            </tr>
+            <tr>
+                <td>{{ porcentaje }}</td>
+                <td>percent:'2.2-2'</td>
+                <td>{{ porcentaje |percent:'2.2-2'}}</td>
+            </tr>
+            <tr>
+                <td>{{ sario }}</td>
+                <td>currency</td>
+                <td>{{ sario |currency}}</td>
+            </tr>
+            <tr>
+                <td>{{ sario }}</td>
+                <td>currency:'EUR'</td>
+                <td>{{ sario |currency:'EUR'}}</td>
+            </tr>
+            <tr>
+                <td>{{ sario }}</td>
+                <td>currency:'CAD': 'symbol-narrow':'.0-0'</td>
+                <td>{{ sario |currency:'CAD': 'symbol-narrow':'.0-0'}}</td>
+            </tr>
         </table>
 
         <table>
@@ -55,5 +80,15 @@
             </ul>
 
         </table>
+        <h3>JSON</h3>
+        <hr>
+        <div class="row mb-5">
+            <div class="col">
+                <pre>
+
+                    {{ heroe | json}}
+                </pre>
+            </div>
+        </div>
     </div>
 </div>
