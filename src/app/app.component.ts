@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { resolve } from 'url';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,8 @@ export class AppComponent {
 
   sario: number = 1234.5;
 
+  fecha: Date = new Date();
+
   heroe = {
     nombre: 'Logan',
     clave: 'Wolverine',
@@ -23,5 +26,13 @@ export class AppComponent {
       calle: 'Primera',
       casa: 20
     }
-  }
+  };
+  idioma: string;
+   
+  valorPromesa = new Promise<string>(( resolve ) => {
+
+    setTimeout(() => {
+      resolve('llego la data');
+    }, 4500);
+  });
 }

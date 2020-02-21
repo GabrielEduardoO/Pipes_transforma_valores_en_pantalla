@@ -71,6 +71,42 @@
                 <td>currency:'CAD': 'symbol-narrow':'.0-0'</td>
                 <td>{{ sario |currency:'CAD': 'symbol-narrow':'.0-0'}}</td>
             </tr>
+            <tr>
+                <td>{{ valorPromesa }}</td>
+                <td> async </td>
+                <td>{{ valorPromesa |async}}</td>
+            </tr>
+            <tr>
+                <td>{{ fecha }}</td>
+                <td> fecha </td>
+                <td>{{ fecha | date}}</td>
+            </tr>
+            <tr>
+                <td>{{ fecha }}</td>
+                <td> date:'medium' </td>
+                <td>{{ fecha | date:'medium'}}</td>
+            </tr>
+            <tr>
+                <td>{{ fecha }}</td>
+                <td> date:'small' </td>
+                <td>{{ fecha | date:'short'}}</td>
+            </tr>
+            <tr>
+                <td>{{ fecha }}</td>
+                <td> date:'MMMM-dd' </td>
+                <td>{{ fecha | date:'MMMM-dd'}}</td>
+            </tr>
+            <tr>
+                <td>{{ fecha }}</td>
+                <td>
+                    date:'MMMM-dd':'':'{{idioma}}'
+                    <br>
+                    <button (click)="idioma='es'" class="mr-1 btn btn-primary">Español</button>
+                    <button (click)="idioma='en'" class="mr-1 btn btn-secondary">Inglés</button>
+                    <button (click)="idioma='fr'" class="mr-1 btn btn-success">Francés</button>
+                </td>
+                <td>{{ fecha | date:'MMMM-dd':'':idioma}}</td>
+            </tr>
         </table>
 
         <table>
@@ -85,7 +121,6 @@
         <div class="row mb-5">
             <div class="col">
                 <pre>
-
                     {{ heroe | json}}
                 </pre>
             </div>
