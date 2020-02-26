@@ -7,16 +7,16 @@ import { resolve } from 'url';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  nombre: string = 'Capitán américa';
-  arreglo = [1, 2 , 3 , 4, 5, 6 , 7 , 8, 9, 10];
-
-  PI: number =  Math.PI;
-
-  porcentaje: number = 0.234;
-
-  sario: number = 1234.5;
-
+  nombre      = 'Capitán américa';
+  nombre2     = 'cArlOs bErmUdeZ';
+  arreglo     = [1, 2 , 3 , 4, 5, 6 , 7 , 8, 9, 10];
+  PI          =  Math.PI;
+  sario       = 1234.5;
+  porcentaje  = 0.234;
   fecha: Date = new Date();
+  activar     = true;
+  idioma:       string;
+  videoUrl = 'https://www.youtube.com/embed/Kc8KPE0O6g0';
 
   heroe = {
     nombre: 'Logan',
@@ -27,7 +27,15 @@ export class AppComponent {
       casa: 20
     }
   };
-  idioma: string;
+
+
+   cambiarValor = () =>  {
+    if(this.activar === true){
+      this.activar = false
+    }else{
+      this.activar = true;
+    }
+  }
    
   valorPromesa = new Promise<string>(( resolve ) => {
 
